@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="about-section sec-padding" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2>about me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="about-img">
+            <div class="img-box">
+              <img src="{% static '' %}img/about-img.png" alt="about img">
+            </div>
+          </div>
+          <div class="about-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nihil repellat dolorem voluptatibus. Minus
+              dolor error unde, obcaecati est fugit autem placeat deleniti eius repellat nihil ad tempore? Esse,
+              voluptatum voluptas hic aliquam debitis, id praesentium quas aliquid voluptate, minima iste nihil eos?
+              Quibusdam provident libero laboriosam vero delectus totam!</p>
+            <h3>skills</h3>
+            <div class="skills">
+              <div class="skill-item">django</div>
+              <div class="skill-item">python</div>
+              <div class="skill-item">html</div>
+              <div class="skill-item">css</div>
+              <div class="skill-item">javascript</div>
+              <div class="skill-item">bootstrap</div>
+              <div class="skill-item">postgresql</div>
+              <div class="skill-item">git</div>
+              <div class="skill-item">linux</div>
+              <div class="skill-item">react</div>
+            </div>
+
+            <div class="about-tabs">
+              <button type="button" class="tab-item active" data-target="#education">education</button>
+              <button type="button" class="tab-item" data-target="#experience">experience</button>
+            </div>
+
+            <!-- Education Start -->
+            <div class="tab-content active" id="education">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="date">2016 - 2019</span>
+                  <h4>b.sc. - <span>jashore university of science and technology</span></h4>
+                  <p>Computer Science and Engineering</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="date">2012 - 2015</span>
+                  <h4>hsc - <span>Daulatpur College</span></h4>
+                  <p>Science</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="date">2010 - 2012</span>
+                  <h4>ssc - <span>lakshmikhola high school</span></h4>
+                  <p>Science</p>
+                </div>
+              </div>
+            </div>
+            <!-- Education End -->
+
+            <!-- Experience Start -->
+
+            <div class="tab-content" id="experience">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="date">2013 - 2016</span>
+                  <h4>Web Developer - <span>Softspire</span></h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium non reiciendis officia
+                    obcaecati et.</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="date">2013 - 2016</span>
+                  <h4>Web Developer - <span>Softspire</span></h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium non reiciendis officia
+                    obcaecati et.</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="date">2013 - 2016</span>
+                  <h4>Web Developer - <span>Softspire</span></h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium non reiciendis officia
+                    obcaecati et.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience End -->
+
+            <a href="{% static '' %}cv.pdf" class="btn link-item" target="_blank">download cv</a>
+            <a href="{% url 'MyApp:contact' %}" class="btn link-item">contact me</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock body %}

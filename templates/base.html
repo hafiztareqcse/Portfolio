@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <title>Hafiz Tareq </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static '' %}css/font-awesome.css">
+  <link rel="stylesheet" href="{% static '' %}css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <!-- page Loader Start -->
+
+  <div class="page-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- page Loader End -->
+
+  <!-- Background Circles Start -->
+  <div class="bg-circles">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    <div class="circle-4"></div>
+  </div>
+  <!-- Background Circles End -->
+
+  <!-- Overlay Start -->
+  <div class="overlay">
+
+  </div>
+  <!-- Overlay End -->
+
+  <!-- Main Start -->
+  <div class="main hidden">
+
+    <!-- Header Section Start -->
+
+    <header class="header">
+      <div class="container">
+        <div class="row flex-end">
+          <button type="button" class="nav-toggler">
+            <span></span>
+          </button>
+          <nav class="nav">
+            <div class="nav-inner">
+              <ul>
+                <li><a href="#home" class="nav-item link-item">Home</a></li>
+                <li><a href="#about" class="nav-item link-item">about</a></li>
+                <li><a href="#portfolio" class="nav-item link-item">portfolio</a></li>
+                <li><a href="#contact" class="nav-item link-item">contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header Section End -->
+
+    {% block body %}
+    {% endblock body %}
+  </div>
+  <!-- Main End -->
+
+  <!-- Portfolio Item Details Popup Start -->
+    {% block portfolio_item %}
+    {% endblock portfolio_item %}
+
+  <!-- Portfolio Item Details Popup End -->
+
+  <script src="{% static '' %}js/script.js"></script>
+</body>
+
+</html>
