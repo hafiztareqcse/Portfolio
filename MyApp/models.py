@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.forms import ModelForm, TextInput, EmailInput
 
 # Create your models here.
 
@@ -51,3 +51,33 @@ class Experience(models.Model):
     def __str__(self):
         return self.company
 
+class ContactMessage(models.Model):
+    STATUS = (
+        ('New', 'New'),
+        ('Read', 'Read'),
+        ('Closed', 'Closed'),
+    )
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=50)
+    subject = models.CharField(max_length=200, blank=True)
+    message = models.TextField()
+    status = models.CharField(max_length=40, choices=STATUS, default='New')
+    ip = models.CharField(max_length=100, blank=True, null=True)
+    note = models.CharField(max_length=200, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class ContactForm(ModelForm):
+    class Meta:
+        model = ContactMessage
+        fields = ['name', 'email', 'subject', 'message']
+        widgets = {
+            'name': TextInput(attrs={'placeholder': 'Your Name'}),
+            'email': EmailInput(attrs={'placeholder': 'Your Email'}),
+            'subject': TextInput(attrs={'placeholder': 'Subject'}),
+            'message': TextInput(attrs={'placeholder': 'Write Message'}),
+        }
