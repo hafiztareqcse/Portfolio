@@ -1,6 +1,7 @@
 from django.db import models
 from django.forms import ModelForm, TextInput, EmailInput
 
+
 # Create your models here.
 
 class Personal(models.Model):
@@ -51,6 +52,7 @@ class Experience(models.Model):
     def __str__(self):
         return self.company
 
+
 class ContactMessage(models.Model):
     STATUS = (
         ('New', 'New'),
@@ -81,3 +83,16 @@ class ContactForm(ModelForm):
             'subject': TextInput(attrs={'placeholder': 'Subject'}),
             'message': TextInput(attrs={'placeholder': 'Write Message'}),
         }
+
+
+class Portfolio(models.Model):
+    name = models.CharField(max_length=30, blank=True)
+    role = models.CharField(max_length=30, blank=True)
+    details = models.CharField(max_length=400, blank=True)
+    image = models.ImageField(blank=True, upload_to='project')
+    view_online = models.CharField(max_length=50, blank=True)
+    technology_used = models.CharField(max_length=50, blank=True)
+    created_at = models.CharField(max_length=20, blank=True)
+
+    def __str__(self):
+        return self.name

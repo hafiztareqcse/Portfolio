@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
-from MyApp.models import Personal, Skill, Education, Experience, ContactForm, ContactMessage
+from MyApp.models import Personal, Skill, Education, Experience, ContactForm, ContactMessage, Portfolio
 
 
 # Create your views here.
@@ -17,6 +17,7 @@ def home(request):
             data.save()
             return HttpResponseRedirect(reverse('MyApp:home'))
     form = ContactForm
+    project = Portfolio.objects.all()
     personal = Personal.objects.get(id=1)
     skill = Skill.objects.all()
     education = Education.objects.all()
@@ -25,6 +26,7 @@ def home(request):
                'skill': skill,
                'education': education,
                'experience': experience,
-               'form': form
+               'form': form,
+               'project': project,
                }
     return render(request, 'home.html', context)

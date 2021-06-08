@@ -92,148 +92,28 @@
         </div>
         <div class="row">
           <!-- Portfolio Item Start -->
+          {% for t in project %}
           <div class="portfolio-item">
             <div class="portfolio-item-thumbnail">
-              <img src="img/portfolio/1.jpg" alt="portfolio item thumb">
+              <img src="{{ t.image.url }}" alt="portfolio item thumb">
             </div>
-            <h3 class="portfolio-item-title">education</h3>
+            <h3 class="portfolio-item-title">{{ t.name }}</h3>
             <button type="button" class="btn view-project-btn">view project</button>
             <div class="portfolio-item-details">
               <div class="description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eos eaque ipsam accusantium omnis
-                  accusamus amet pariatur quae. Debitis, rerum incidunt nam id animi modi illum esse blanditiis, aperiam
-                  soluta est eaque? Alias eius omnis quae cupiditate, error iure sed.</p>
+                <p>{{ t.details }}</p>
               </div>
               <div class="general-info">
                 <ul>
-                  <li>Created - <span>4 Dec 2020</span></li>
-                  <li>technology used - <span>Html,Css</span></li>
-                  <li>Role - <span>Frontend</span></li>
-                  <li>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></li>
+                  <li>Created - <span>{{ t.created_at }}</span></li>
+                  <li>technology used - <span>{{ t.technology_used }}</span></li>
+                  <li>Role - <span>{{ t.role }}</span></li>
+                  <li>View Online - <span><a href="{{ t.view_online }}" target="_blank">{{ t.view_online }}</a></span></li>
                 </ul>
               </div>
             </div>
           </div>
-          <!-- Portfolio Item End -->
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="img/portfolio/2.jpg" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">personal portfolio website</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eos eaque ipsam accusantium omnis
-                  accusamus amet pariatur quae. Debitis, rerum incidunt nam id animi modi illum esse blanditiis, aperiam
-                  soluta est eaque? Alias eius omnis quae cupiditate, error iure sed.</p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>Created - <span>4 Dec 2020</span></li>
-                  <li>technology used - <span>Html,Css,bootstrap</span></li>
-                  <li>Role - <span>Frontend</span></li>
-                  <li>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="img/portfolio/3.jpg" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">App Landing page</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eos eaque ipsam accusantium omnis
-                  accusamus amet pariatur quae. Debitis, rerum incidunt nam id animi modi illum esse blanditiis, aperiam
-                  soluta est eaque? Alias eius omnis quae cupiditate, error iure sed.</p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>Created - <span>4 Dec 2020</span></li>
-                  <li>technology used - <span>Html,Css,font-awesome</span></li>
-                  <li>Role - <span>Frontend</span></li>
-                  <li>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="img/portfolio/4.jpg" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">Restaurant website</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eos eaque ipsam accusantium omnis
-                  accusamus amet pariatur quae. Debitis, rerum incidunt nam id animi modi illum esse blanditiis, aperiam
-                  soluta est eaque? Alias eius omnis quae cupiditate, error iure sed.</p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>Created - <span>4 Dec 2020</span></li>
-                  <li>technology used - <span>Html,Css,bootstrap 5</span></li>
-                  <li>Role - <span>Frontend</span></li>
-                  <li>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="img/portfolio/5.jpg" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">personal portfolio website</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eos eaque ipsam accusantium omnis
-                  accusamus amet pariatur quae. Debitis, rerum incidunt nam id animi modi illum esse blanditiis, aperiam
-                  soluta est eaque? Alias eius omnis quae cupiditate, error iure sed.</p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>Created - <span>4 Dec 2020</span></li>
-                  <li>technology used - <span>Html,Css,bootstrap 4</span></li>
-                  <li>Role - <span>Frontend</span></li>
-                  <li>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="img/portfolio/6.jpg" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">Product Landing page</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eos eaque ipsam accusantium omnis
-                  accusamus amet pariatur quae. Debitis, rerum incidunt nam id animi modi illum esse blanditiis, aperiam
-                  soluta est eaque? Alias eius omnis quae cupiditate, error iure sed.</p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>Created - <span>4 Dec 2020</span></li>
-                  <li>technology used - <span>Html,Css,bootstrap 4</span></li>
-                  <li>Role - <span>Frontend</span></li>
-                  <li>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
           <!-- Portfolio Item End -->
         </div>
       </div>
